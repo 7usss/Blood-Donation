@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="@drawable/gradient_background">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.16" />
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="109dp"
+        android:src="@drawable/blooddrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+    <TextView
+    android:layout_marginTop="8dp"
+    android:id="@+id/text1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Blood Donation"
+    android:gravity="center"
+    android:textSize="22dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/img"
+    android:textStyle="bold"
+    android:textColor="#C7A52323"/>
+
+    <EditText
+        android:textColorHint="@color/purple_500"
+        android:inputType="textEmailAddress"
+        android:paddingBottom="16dp"
+        android:paddingTop="8dp"
+        android:gravity="center"
+        android:drawableTop="@drawable/ic_baseline_email_24"
+        android:id="@+id/emailTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+       android:background="@drawable/custom_editext"
+        android:hint="Enter your email ..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        android:textColor="#D35757"/>
+
+    <EditText
+        android:textColorHint="@color/purple_500"
+        android:inputType="textPassword"
+        android:id="@+id/passwordET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/custom_editext"
+        android:drawableTop="@drawable/ic_baseline_lock_24"
+        android:paddingBottom="16dp"
+        android:paddingTop="8dp"
+        android:textColor="#D35757"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center"
+        android:hint="Enter your password ..."
+        app:layout_constraintTop_toBottomOf="@id/emailTV"
+        tools:layout_editor_absoluteX="26dp" />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="login"
+        android:background="@drawable/custom_editext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+    <TextView
+        android:id="@+id/goToregisterpageTV"
+        android:layout_marginTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Don't have an account?..Register here"
+        android:textStyle="italic|bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
+        android:clickable="true"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
