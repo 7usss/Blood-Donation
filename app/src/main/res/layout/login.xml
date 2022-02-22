@@ -12,17 +12,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
+        app:layout_constraintGuide_percent="0.12" />
 
 
     <ImageView
         android:id="@+id/img"
-        android:layout_width="match_parent"
-        android:layout_height="109dp"
+        android:layout_width="417dp"
+        android:layout_height="108dp"
         android:src="@drawable/blooddrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
     <TextView
     android:layout_marginTop="8dp"
     android:id="@+id/text1"
@@ -76,12 +77,25 @@
         app:layout_constraintTop_toBottomOf="@id/emailTV"
         tools:layout_editor_absoluteX="26dp" />
 
+    <TextView
+        android:id="@+id/forgotpasswordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Forgot Password?"
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/passwordET"
+        android:clickable="true"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="8dp" />
+
     <Button
         android:id="@+id/buttonLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="login"
         android:background="@drawable/custom_editext"
