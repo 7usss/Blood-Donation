@@ -37,8 +37,9 @@ class register : AppCompatActivity() {
 
                 if (it.isSuccessful){
                     var move_to_main_activity:Intent= Intent(this,MainActivity::class.java)
-                    startActivity(move_to_main_activity)
+                    move_to_main_activity.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     finish()
+                    startActivity(move_to_main_activity)
                 }else{
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_LONG).show()
                 }
