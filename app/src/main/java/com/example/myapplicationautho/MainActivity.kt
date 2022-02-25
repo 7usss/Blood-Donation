@@ -22,16 +22,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         connectview()
-
         ClickOnItemInDrawerNav()
         setSupportActionBar(toolBar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var toggle = ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
         drawer?.addDrawerListener(toggle)
         toggle.syncState()
-
     }
-
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
             when(it.itemId){
@@ -49,10 +46,8 @@ class MainActivity : AppCompatActivity() {
                     drawer?.closeDrawer(GravityCompat.START)
                     true
                 }else -> true
-
             }
         }
-
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId){
@@ -61,12 +56,8 @@ class MainActivity : AppCompatActivity() {
                 true
             }
             else -> true
-
         }
     }
-
-
-
     private fun connectview() {
         drawer= findViewById(R.id.drawer1)
         navingationview= findViewById(R.id.navigation_view)

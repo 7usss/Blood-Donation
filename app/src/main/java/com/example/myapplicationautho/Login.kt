@@ -13,7 +13,7 @@ class Login() : AppCompatActivity()  {
     private var Emailinloin:EditText?= null
     private var Passwordinlogin:EditText?= null
     private var buttoninlogin :Button?= null
-    private var forgotpassword :TextView?=null
+    private var forgotpassword :TextView?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
