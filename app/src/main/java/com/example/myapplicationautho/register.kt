@@ -37,7 +37,7 @@ class register : AppCompatActivity() {
             var name=Nameinregister?.text.toString().trim()
             var email= emailinregister?.text.toString().trim()
             var password = passwordinregister?.text.toString().trim()
-            var phone = phoneinregister?.text?.toString()!!.trim()
+            var phone = phoneinregister?.text.toString().trim().toInt()
 
             Authe?.createUserWithEmailAndPassword(email,password)?.addOnCompleteListener {
                 val newUser = User(name,phone)

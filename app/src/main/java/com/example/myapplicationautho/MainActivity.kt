@@ -11,6 +11,8 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.rpc.context.AttributeContext
 
 class MainActivity : AppCompatActivity() {
     private var drawer:DrawerLayout? =null
@@ -18,10 +20,12 @@ class MainActivity : AppCompatActivity() {
     private var framelayout:FrameLayout? =null
     private var bottomnavigation:BottomNavigationView? =null
     private var toolBar:Toolbar? =null
+    private var Authe: FirebaseAuth? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         connectview()
+        Authe= FirebaseAuth.getInstance()
         ClickOnItemInDrawerNav()
         setSupportActionBar(toolBar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -37,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.logout ->{
+                    Authe?.signOut()
                     var x : Intent = Intent(this,Login::class.java)
                     startActivity(x)
                     finish()

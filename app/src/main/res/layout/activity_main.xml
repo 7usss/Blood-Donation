@@ -37,7 +37,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_alignParentBottom="true"
-            app:menu="@menu/menu_btm_nav"/>
+            app:menu="@menu/menu_btm_nav"
+            android:background="@color/white"/>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -48,6 +49,9 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     app:menu="@menu/menu_drawer_nav"
-    app:headerLayout="@layout/custom_header"/>
+    app:itemTextColor="#E4111010"
+    app:itemIconTint="@color/purple_500"
+    app:headerLayout="@layout/custom_header"
+   />
 
 </androidx.drawerlayout.widget.DrawerLayout>

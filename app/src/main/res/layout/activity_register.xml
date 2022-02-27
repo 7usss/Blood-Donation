@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".register"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/color_for_customheader">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -34,9 +34,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img2"
         android:textStyle="bold"
-        android:textColor="#C7A52323"/>
+        android:textColor="#EFFFFFFF"/>
 
     <EditText
+        android:textColorHint="@color/purple_500"
         android:importantForAutofill="no"
         android:id="@+id/Name"
         android:layout_width="match_parent"
@@ -50,12 +51,13 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:textColor="#D35757"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
     <EditText
+        android:textColorHint="@color/purple_500"
         android:id="@+id/email"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
@@ -73,6 +75,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Name" />
     <EditText
+        android:textColorHint="@color/purple_500"
         android:id="@+id/pass"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
@@ -90,7 +93,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
     <EditText
-
+        android:textColorHint="@color/purple_500"
         android:id="@+id/phone"
         android:layout_marginTop="16dp"
         android:layout_width="match_parent"
@@ -110,20 +113,19 @@
 
 
     <Button
-
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/white"
         android:text="Register"
-        android:background="@drawable/custom_editext"
+        android:background="@drawable/button_custtom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phone"
         />
-
 
 
 

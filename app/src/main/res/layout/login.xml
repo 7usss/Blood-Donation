@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Login"
-    android:background="@drawable/gradient_background">
+    android:background="@drawable/color_for_customheader">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -25,18 +25,19 @@
         app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
     <TextView
+
     android:layout_marginTop="8dp"
     android:id="@+id/text1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Blood Donation"
     android:gravity="center"
-    android:textSize="22dp"
+    android:textSize="24dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@id/img"
     android:textStyle="bold"
-    android:textColor="#C7A52323"/>
+    android:textColor="#FAF2EEEE"/>
 
     <EditText
         android:textColorHint="@color/purple_500"
@@ -82,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Forgot Password?"
-        android:textColorHint="@color/purple_500"
+        android:textColorHint="#FAF9F9"
         app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordET"
@@ -97,11 +98,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:text="login"
-        android:background="@drawable/custom_editext"
+        android:textColor="@color/white"
+        android:text="Login"
+        android:background="@drawable/button_custtom"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordET"
+        />
 
     <TextView
         android:id="@+id/goToregisterpageTV"
@@ -112,10 +115,30 @@
         android:textStyle="italic|bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:textColor="@color/purple_500"
+        android:textColor="#F6F3F3"
         app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
         android:clickable="true"
         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/goToregisterpageTV"
+
+        >
+
+        <ProgressBar
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/white_circle" />
+
+    </RelativeLayout>
 
 
 
