@@ -4,10 +4,8 @@ package com.example.myapplicationautho
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.view.View
+import android.widget.*
 import com.google.firebase.auth.FirebaseAuth
 
 class Login() : AppCompatActivity()  {
@@ -17,22 +15,27 @@ class Login() : AppCompatActivity()  {
     private var buttoninlogin :Button?= null
     private var forgotpassword :TextView?= null
     private var Authe: FirebaseAuth? = null
+    private var progrissbar:ProgressBar?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
         connectview()
         Authe= FirebaseAuth.getInstance()
-        movetoregisterpage()
         LoginToMainActivity()
+        movetoregisterpage()
+
     }
 
     private fun LoginToMainActivity() {
+
         buttoninlogin?.setOnClickListener {
             var email2 = Emailinloin?.text.toString().trim()
             var password2 = Passwordinlogin?.text.toString().trim()
 
+
             Authe?.signInWithEmailAndPassword(email2,password2)?.addOnCompleteListener {
                 if (it.isSuccessful) {
+                    progrissbar?.visibility = View.VISIBLE
                     var move_to_main_activity1: Intent = Intent(this, MainActivity::class.java)
                     move_to_main_activity1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
                     finish()
@@ -41,6 +44,7 @@ class Login() : AppCompatActivity()  {
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_LONG).show()
                 }
             }
+            progrissbar?.visibility = View.VISIBLE
         }
     }
 
@@ -62,6 +66,7 @@ class Login() : AppCompatActivity()  {
     }
 
     private fun connectview() {
+        progrissbar=findViewById(R.id.progress_par)
         GoToRegisterPage=findViewById(R.id.goToregisterpageTV)
         Emailinloin = findViewById(R.id.emailTV)
         Passwordinlogin = findViewById(R.id.passwordET)
