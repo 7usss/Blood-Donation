@@ -2,14 +2,20 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:gravity="center"
     tools:context=".NeederFragment">
 
-    <TextView
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="NeederFragment"
-        android:gravity="center"/>
+        tools:listitem="@layout/custom_fragment_needer"/>
+
+
+
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>
