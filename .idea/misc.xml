@@ -3,33 +3,44 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/button_custtom.xml" value="0.4245" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_loading.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_donator.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_emergency.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_needer.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/login.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_btm_nav.xml" value="0.22" />
+        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_drawer_nav.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.227" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/bottom_customaize.xml" value="0.213" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/button_custtom.xml" value="0.495" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/color_for_customheader.xml" value="0.2655" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/custom_botton.xml" value="0.428" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/custom_coloes2.xml" value="0.503" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/custom_editext.xml" value="0.25" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/gradient_background.xml" value="0.33" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_bloodtype_24.xml" value="0.196" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_bloodtype_24.xml" value="0.238" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.1" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_emergency_24.xml" value="0.4245" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.196" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_emergency_24.xml" value="0.238" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.35" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_lock_24.xml" value="0.253" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.196" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.196" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_question_mark_24.xml" value="0.4245" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_needer_24.xml" value="0.196" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/second_circle.xml" value="0.51" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/white_circle.xml" value="0.196" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_loading.xml" value="0.24886991461577096" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.5" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_register.xml" value="0.25" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_header.xml" value="0.5161458333333333" />
-        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/login.xml" value="0.33" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.238" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_power_settings_new_24.xml" value="0.35" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_question_mark_24.xml" value="0.238" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_launcher_background.xml" value="0.35" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_needer_24.xml" value="0.35" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/white_circle.xml" value="0.3365" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_register.xml" value="0.5" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_header.xml" value="0.5" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/login.xml" value="0.5" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_btm_nav.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_drawer_nav.xml" value="0.5" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/xml/custom_header.xml" value="0.5161458333333333" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

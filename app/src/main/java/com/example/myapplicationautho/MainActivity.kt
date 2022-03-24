@@ -9,6 +9,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -32,6 +34,31 @@ class MainActivity : AppCompatActivity() {
         var toggle = ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
         drawer?.addDrawerListener(toggle)
         toggle.syncState()
+        bottomNavigationClicks()
+        chooseFragment(DonatorFragment(),"DONATOR")
+    }
+    private fun bottomNavigationClicks(){
+        bottomnavigation?.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.donator ->{
+                    chooseFragment(DonatorFragment(),"DONATOR")
+                }
+                R.id.needer ->{
+                    chooseFragment(NeederFragment(),"NEEDER")
+                }
+                R.id.emergency ->{
+                    chooseFragment(EmergencyFragment(),"EMERGENCY")
+                }
+            }
+            true
+        }
+    }
+    private fun chooseFragment(fragment:Fragment ,tag:String){
+        val fragmentTransaction:FragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.framelayout,fragment,tag)
+        fragmentTransaction.addToBackStack(tag)
+        fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        fragmentTransaction.commit()
     }
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
