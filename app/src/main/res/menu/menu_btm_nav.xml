@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/donator"
+
+    <item android:id="@+id/donator"
     android:icon="@drawable/ic_baseline_bloodtype_24"
     android:title="Donator"/>
+
     <item android:id="@+id/needer"
         android:icon="@drawable/ic_needer_24"
         android:title="Needer"/>
+
     <item android:id="@+id/emergency"
         android:icon="@drawable/ic_baseline_emergency_24"
         android:title="Emergency"/>

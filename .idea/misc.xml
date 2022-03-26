@@ -5,7 +5,6 @@
       <map>
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_loading.xml" value="0.17074275362318841" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_fragment_needer.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_donator.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_emergency.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/HP/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_needer.xml" value="0.20416666666666666" />
@@ -38,6 +37,17 @@
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_btm_nav.xml" value="0.5161458333333333" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_drawer_nav.xml" value="0.5" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/xml/custom_header.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_loading.xml" value="0.25" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_register.xml" value="0.15715579710144928" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_fragment_needer.xml" value="0.264" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_header.xml" value="0.1308876811594203" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_donator.xml" value="0.1" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_emergency.xml" value="0.25" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_needer.xml" value="0.264" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/login.xml" value="0.15715579710144928" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_btm_nav.xml" value="0.25" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_drawer_nav.xml" value="0.25" />
       </map>
     </option>
   </component>

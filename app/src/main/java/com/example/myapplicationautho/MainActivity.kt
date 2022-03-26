@@ -25,41 +25,55 @@ class MainActivity : AppCompatActivity() {
     private var Authe: FirebaseAuth? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        
         setContentView(R.layout.activity_main)
+
         connectview()
+
         Authe= FirebaseAuth.getInstance()
         ClickOnItemInDrawerNav()
+
         setSupportActionBar(toolBar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var toggle = ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
         drawer?.addDrawerListener(toggle)
         toggle.syncState()
-        bottomNavigationClicks()
-        chooseFragment(DonatorFragment(),"DONATOR")
+
+        bottomNavigatinClicks()
+        chooseFragment(DonatorFragment(),"Donator")
+
+
+    // open fragment
+
+
+
     }
-    private fun bottomNavigationClicks(){
+    private fun bottomNavigatinClicks(){
         bottomnavigation?.setOnItemSelectedListener {
             when(it.itemId){
                 R.id.donator ->{
-                    chooseFragment(DonatorFragment(),"DONATOR")
+                    chooseFragment(DonatorFragment(),"Donator")
                 }
                 R.id.needer ->{
-                    chooseFragment(NeederFragment(),"NEEDER")
+                    chooseFragment(NeederFragment(),"Needer")
                 }
                 R.id.emergency ->{
-                    chooseFragment(EmergencyFragment(),"EMERGENCY")
+                    chooseFragment(EmergencyFragment(),"Emergency")
                 }
             }
             true
         }
     }
-    private fun chooseFragment(fragment:Fragment ,tag:String){
+
+    private fun chooseFragment(fragment:Fragment,tag:String){
         val fragmentTransaction:FragmentTransaction = supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.framelayout,fragment,tag)
         fragmentTransaction.addToBackStack(tag)
         fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         fragmentTransaction.commit()
+
     }
+
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
             when(it.itemId){
