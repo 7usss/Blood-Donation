@@ -5,12 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.DocumentReference
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
 
 class register : AppCompatActivity() {
 
@@ -34,13 +32,13 @@ class register : AppCompatActivity() {
 
     private fun newaccount() {
         buttoninregister?.setOnClickListener {
-            var name=Nameinregister?.text.toString().trim()
+            var Name=Nameinregister?.text.toString().trim()
             var email= emailinregister?.text.toString().trim()
             var password = passwordinregister?.text.toString().trim()
-            var phone = phoneinregister?.text.toString().trim().toInt()
+            var phone = phoneinregister?.text.toString().trim()
 
             Authe?.createUserWithEmailAndPassword(email,password)?.addOnCompleteListener {
-                val newUser = User(name,phone)
+                val newUser = User(Name,phone)
                 CurrentUserRefDocRef.set(newUser)
                 if (it.isSuccessful){
                     var move_to_main_activity:Intent= Intent(this,MainActivity::class.java)
