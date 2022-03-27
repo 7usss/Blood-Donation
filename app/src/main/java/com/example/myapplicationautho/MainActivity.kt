@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         var toggle = ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
         drawer?.addDrawerListener(toggle)
-        toggle.syncState()ااا
+        toggle.syncState()
     }
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
