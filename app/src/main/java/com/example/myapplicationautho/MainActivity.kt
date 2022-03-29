@@ -10,6 +10,8 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -31,6 +33,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        // عشلن تبدأ fragment donator
+        if (savedInstanceState == null) {
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.framelayout,DonatorFragment())
+                .commitNow()
+        }
         connectview()
         ClickOnItemInDrawerNav()
         setSupportActionBar(toolBar)
@@ -38,6 +46,8 @@ class MainActivity : AppCompatActivity() {
         var toggle = ActionBarDrawerToggle(this,drawer,R.string.open,R.string.close)
         drawer?.addDrawerListener(toggle)
         toggle.syncState()
+        // داله تسمع لي ضغط القائمة السفلية
+        bottomnavigationClicks()
       /*  getuserinformation() {User ->
             Username_in_header?.text = User.Name
         }*/
@@ -57,6 +67,35 @@ class MainActivity : AppCompatActivity() {
             onComplete(it.toObject(User::class.java)!!)
         }
     }*/
+    private fun bottomnavigationClicks(){
+        bottomnavigation?.setOnItemSelectedListener {
+            when(it.itemId){
+                R.id.donator ->{
+                    chooseFrahment(DonatorFragment(),"DONATOR")
+                }
+                R.id.needer ->{
+                    chooseFrahment(NeederFragment(),"NEEDER")
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.framelayout,NeederFragment())
+                        .commit()
+                }
+                R.id.emergency ->{
+                    chooseFrahment(EmergencyFragment(),"EMERGENCY")
+                    supportFragmentManager.beginTransaction()
+                        .replace(R.id.framelayout,EmergencyFragment())
+                        .commit()
+                }
+            }
+            true
+        }
+    }
+    private fun chooseFrahment(fragment:Fragment,tag:String){
+        val fragmentTransaction:FragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.framelayout,fragment,tag)
+      fragmentTransaction.addToBackStack(tag)
+      fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+      fragmentTransaction.commit()
+    }
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
             when(it.itemId){
