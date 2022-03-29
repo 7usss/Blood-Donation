@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="15dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/shape_background">
+
+        <TextView
+            android:text="Add the information for donat"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="@color/white"
+            android:background="@color/purple_700"
+            android:padding="10dp"
+            android:gravity="center"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/UserName"
+            android:hint="Name"
+            android:background="@drawable/shape_background"
+            android:padding="15dp"
+            android:textColor="@color/purple_700"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/UserCity"
+            android:hint="City"
+            android:textColor="@color/purple_700"
+            android:background="@drawable/shape_background"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="text"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/UserBlood"
+            android:textColor="@color/purple_700"
+            android:hint="Blood Type"
+            android:textSize="18sp"
+            android:background="@drawable/shape_background"
+            android:padding="15dp"
+            android:textStyle="bold"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/UserPhone"
+            android:hint="Number Phone"
+            android:textColor="@color/purple_700"
+            android:background="@drawable/shape_background"
+            android:padding="15dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:inputType="phone"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

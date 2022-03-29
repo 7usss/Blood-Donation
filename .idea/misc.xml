@@ -40,8 +40,12 @@
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_btm_nav.xml" value="0.5161458333333333" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_drawer_nav.xml" value="0.5" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/xml/custom_header.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.126" />
         <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_baseline_brightness_1_24.xml" value="0.1675" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/shape_background.xml" value="0.126" />
         <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/add_item.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_header.xml" value="0.12158054711246201" />
         <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/donator_item.xml" value="0.25" />
         <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_donator.xml" value="0.264" />
         <entry key="..\:/Users/heroi/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_emergency.xml" value="0.1308876811594203" />

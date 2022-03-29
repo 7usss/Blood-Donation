@@ -5,14 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 
 class DonatorFragment : Fragment() {
     var v:View? =null
     private lateinit var recyv:RecyclerView
     private lateinit var adapterDonator:AdapterDonator
+    private lateinit var addBtn:FloatingActionButton
+    private lateinit var userList:ArrayList<UserData1>
 
 
 
@@ -29,38 +35,52 @@ class DonatorFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        RecyclerView(view)
-        prepaerArray()
+        connectView(view)
+        addBtn.setOnClickListener {
+            addInfo()
+        }
     }
 
-    private fun RecyclerView(view: View) {
+    private fun connectView(view: View) {
         recyv = v?.findViewById(R.id.recycler_donator)!!
+        addBtn = v?.findViewById(R.id.addingBtn)!!
+        userList = ArrayList()
+        adapterDonator = AdapterDonator(this.context,userList)
+        recyv.layoutManager =  LinearLayoutManager(this.context)
+        recyv.adapter = adapterDonator
 
 
-    }
-
-    private fun prepaerArray(){
-        val array:ArrayList<UserData1> = ArrayList()
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        array.add(UserData1("abdullah","City","A+","0538877972"))
-        val customAdapter:AdapterDonator = AdapterDonator(this.context,array)
-        recyv.layoutManager = LinearLayoutManager(this.context,LinearLayoutManager.VERTICAL,false)
-        recyv.adapter = customAdapter
 
     }
+    private fun addInfo(){
+        val inflater = LayoutInflater.from(this.context)
+        val v = inflater.inflate(R.layout.add_item,null)
+        val userName = v.findViewById<EditText>(R.id.UserName)
+        val userCity = v.findViewById<EditText>(R.id.UserCity)
+        val userBlood = v.findViewById<EditText>(R.id.UserBlood)
+        val userPhone = v.findViewById<EditText>(R.id.UserPhone)
+        val addDialog = AlertDialog.Builder(this.requireContext())
+        addDialog.setView(v)
+        addDialog.setPositiveButton("OK"){
+            dialog,_->
+            val names = userName.text.toString()
+            val cities = userCity.text.toString()
+            val bloodTypes = userBlood.text.toString()
+            val pohoneNums = userPhone.text.toString()
+            userList.add(UserData1("Name: $names","City: $cities"
+                ,"BloodType: $bloodTypes","Phone: $pohoneNums"))
+            adapterDonator.notifyDataSetChanged()
+            Toast.makeText(this.context,"adding user information success",Toast.LENGTH_LONG).show()
+            dialog.dismiss()
+        }
+        addDialog.setNegativeButton("cancel"){
+            dialog,_->
+            dialog.dismiss()
+            Toast.makeText(this.context,"cancel",Toast.LENGTH_LONG).show()
 
+        }
+        addDialog.create()
+        addDialog.show()
+    }
 
 }
