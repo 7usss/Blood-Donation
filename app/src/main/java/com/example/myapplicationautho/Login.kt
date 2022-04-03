@@ -41,10 +41,11 @@ class Login() : AppCompatActivity()  {
                     finish()
                     startActivity(move_to_main_activity1)
                 }else{
+                    progrissbar?.visibility = View.INVISIBLE
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_LONG).show()
                 }
             }
-            progrissbar?.visibility = View.VISIBLE
+
         }
     }
 
