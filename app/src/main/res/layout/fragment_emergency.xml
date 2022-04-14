@@ -4,11 +4,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragment.DonatorFragment">
+    tools:context=".fragment.EmergencyFragment">
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvNeeder"
+        android:id="@+id/rvEmergency"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/layout_donator_post_item"
