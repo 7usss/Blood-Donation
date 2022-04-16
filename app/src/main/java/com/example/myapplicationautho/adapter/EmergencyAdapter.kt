@@ -4,9 +4,11 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.Menu
+import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplicationautho.activity.MainActivity
 import com.example.myapplicationautho.databinding.LayoutEmergencyPostItemBinding
 import com.example.myapplicationautho.model.EmergencyPost
 
@@ -67,26 +69,31 @@ class EmergencyAdapter(private val activity: Activity,
 
                 binding.tvText.text = stringBuilder.toString()
 
-                binding.ibOptions.setOnClickListener {
-                    val popupMenu = PopupMenu(activity, binding.ibOptions)
+                if(MainActivity.user.key == current.userKey){
+                    binding.ibOptions.visibility = View.VISIBLE
+                    binding.ibOptions.setOnClickListener {
+                        val popupMenu = PopupMenu(activity, binding.ibOptions)
 
-                    popupMenu.menu.add(Menu.NONE, 1, Menu.NONE, "Edit")
-                    popupMenu.menu.add(Menu.NONE, 2, Menu.NONE, "Delete")
+                        popupMenu.menu.add(Menu.NONE, 1, Menu.NONE, "Edit")
+                        popupMenu.menu.add(Menu.NONE, 2, Menu.NONE, "Delete")
 
-                    popupMenu.setOnMenuItemClickListener { menuItem -> // Toast message on menu item clicked
-                        when(menuItem.itemId){
-                            1 -> {
-                                interaction?.edit(position, current)
+                        popupMenu.setOnMenuItemClickListener { menuItem -> // Toast message on menu item clicked
+                            when(menuItem.itemId){
+                                1 -> {
+                                    interaction?.edit(position, current)
+                                }
+
+                                2 -> {
+                                    interaction?.delete(position, current)
+                                }
                             }
-
-                            2 -> {
-                                interaction?.delete(position, current)
-                            }
+                            true
                         }
-                        true
+                        // Showing the popup menu
+                        popupMenu.show()
                     }
-                    // Showing the popup menu
-                    popupMenu.show()
+                }else{
+                    binding.ibOptions.visibility = View.GONE
                 }
 
             }
