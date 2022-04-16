@@ -43,8 +43,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var tvUsername :TextView
 
 
-    val bloodTypes = arrayOf("All", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+")
-    val cities = arrayOf("All", "Riyadh", "Jeddah", "Yanbu")
+    val bloodTypes = arrayOf("All", "A", "B", "AB", "O")
+    val cities = arrayOf("All", "Riad", "Gada", "Yanbaa")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,9 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun getUserInformation(onComplete:(User)->Unit) {
         CurrentUserRefDocRef.get().addOnSuccessListener {
-            val user = it.toObject(User::class.java)!!
-            user.key = it.id
-            onComplete(user)
+            onComplete(it.toObject(User::class.java)!!)
         }
     }
     private fun ClickOnItemInDrawerNav() {
