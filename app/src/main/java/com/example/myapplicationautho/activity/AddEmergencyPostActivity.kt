@@ -59,10 +59,13 @@ class AddEmergencyPostActivity : AppCompatActivity() {
         binding.tvBlood.setOnClickListener {
             val popupMenu = PopupMenu(context, binding.tvBlood)
 
-            popupMenu.menu.add(Menu.NONE, 1, Menu.NONE, "A")
-            popupMenu.menu.add(Menu.NONE, 2, Menu.NONE, "B")
-            popupMenu.menu.add(Menu.NONE, 3, Menu.NONE, "AB")
-            popupMenu.menu.add(Menu.NONE, 4, Menu.NONE, "O")
+            popupMenu.menu.add(Menu.NONE, 1, Menu.NONE, "A+")
+            popupMenu.menu.add(Menu.NONE, 2, Menu.NONE, "A-")
+            popupMenu.menu.add(Menu.NONE, 3, Menu.NONE, "B+")
+            popupMenu.menu.add(Menu.NONE, 4, Menu.NONE, "B-")
+            popupMenu.menu.add(Menu.NONE, 5, Menu.NONE, "AB+")
+            popupMenu.menu.add(Menu.NONE, 6, Menu.NONE, "AB-")
+            popupMenu.menu.add(Menu.NONE, 7, Menu.NONE, "O+")
 
             popupMenu.setOnMenuItemClickListener { menuItem -> // Toast message on menu item clicked
                 binding.tvBlood.text = menuItem.title
@@ -75,9 +78,9 @@ class AddEmergencyPostActivity : AppCompatActivity() {
         binding.tvCity.setOnClickListener {
             val popupMenu = PopupMenu(context, binding.tvBlood)
 
-            popupMenu.menu.add(Menu.NONE, 1, Menu.NONE, "Riad")
-            popupMenu.menu.add(Menu.NONE, 2, Menu.NONE, "Gada")
-            popupMenu.menu.add(Menu.NONE, 3, Menu.NONE, "Yanbaa")
+            popupMenu.menu.add(Menu.NONE, 1, Menu.NONE, "Riyadh")
+            popupMenu.menu.add(Menu.NONE, 2, Menu.NONE, "Jeddah")
+            popupMenu.menu.add(Menu.NONE, 3, Menu.NONE, "Yanbu")
 
             popupMenu.setOnMenuItemClickListener { menuItem -> // Toast message on menu item clicked
                 binding.tvCity.text = menuItem.title
@@ -149,6 +152,14 @@ class AddEmergencyPostActivity : AppCompatActivity() {
             valid = false
         } else {
             binding.etAge.error = null
+        }
+
+        val mPhone = binding.etPhone.text.toString()
+        if (TextUtils.isEmpty(mPhone)) {
+            binding.etPhone.error = getString(R.string.error_required)
+            valid = false
+        } else {
+            binding.etPhone.error = null
         }
 
         val mNotes = binding.etNotes.text.toString()
