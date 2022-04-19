@@ -60,9 +60,8 @@ class MainActivity : AppCompatActivity() {
         getUserInformation() { user ->
             tvUsername.text = user.name
             MainActivity.user = user
+            preparenavigation(DonatorFragment(),"Donator")
         }
-
-        preparenavigation(DonatorFragment(),"Donator")
     }
 
 

@@ -9,6 +9,8 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplicationautho.R
 import com.example.myapplicationautho.activity.AddDonatorPostActivity
+import com.example.myapplicationautho.activity.AddEmergencyPostActivity
+import com.example.myapplicationautho.activity.MainActivity
 import com.example.myapplicationautho.adapter.DonatorAdapter
 import com.example.myapplicationautho.databinding.FragmentDonatorBinding
 import com.example.myapplicationautho.model.DonatorPost
@@ -54,9 +56,16 @@ class DonatorFragment : Fragment(R.layout.fragment_donator),
     }
 
     private fun initListeners(){
-        binding.fabAdd.setOnClickListener {
-            startActivity(Intent(requireContext(), AddDonatorPostActivity::class.java))
+
+        if(!MainActivity.user.isHospital){
+            binding.fabAdd.visibility = View.VISIBLE
+            binding.fabAdd.setOnClickListener {
+                startActivity(Intent(requireContext(), AddDonatorPostActivity::class.java))
+            }
+        }else{
+            binding.fabAdd.visibility = View.GONE
         }
+
     }
 
     private fun getDonatorPosts(){

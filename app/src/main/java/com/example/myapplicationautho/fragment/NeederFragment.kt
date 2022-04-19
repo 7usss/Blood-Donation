@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.myapplicationautho.R
 import com.example.myapplicationautho.activity.AddDonatorPostActivity
 import com.example.myapplicationautho.activity.AddNeederActivity
+import com.example.myapplicationautho.activity.MainActivity
 import com.example.myapplicationautho.adapter.DonatorAdapter
 import com.example.myapplicationautho.adapter.NeederAdapter
 import com.example.myapplicationautho.databinding.FragmentDonatorBinding
@@ -59,8 +60,13 @@ class NeederFragment : Fragment(R.layout.fragment_needer),
     }
 
     private fun initListeners(){
-        binding.fabAdd.setOnClickListener {
-            startActivity(Intent(requireContext(), AddNeederActivity::class.java))
+        if(!MainActivity.user.isHospital){
+            binding.fabAdd.visibility = View.VISIBLE
+            binding.fabAdd.setOnClickListener {
+                startActivity(Intent(requireContext(), AddNeederActivity::class.java))
+            }
+        }else{
+            binding.fabAdd.visibility = View.GONE
         }
     }
 
