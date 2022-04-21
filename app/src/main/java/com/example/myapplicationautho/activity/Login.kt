@@ -2,6 +2,7 @@ package com.example.myapplicationautho.activity
 
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -17,6 +18,7 @@ class Login() : AppCompatActivity()  {
     private var forgotpassword :TextView?= null
     private var Authe: FirebaseAuth? = null
     private var progrissbar:ProgressBar?=null
+    private var SendEmail:TextView?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login)
@@ -24,7 +26,15 @@ class Login() : AppCompatActivity()  {
         Authe= FirebaseAuth.getInstance()
         LoginToMainActivity()
         movetoregisterpage()
+        sendemailto_blooddonation_team()
 
+    }
+
+    private fun sendemailto_blooddonation_team() {
+        SendEmail?.setOnClickListener {
+            val emailintent =Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","blooddonation258@gmail.com",null))
+            startActivity(Intent.createChooser(emailintent,"Send email..."))
+        }
     }
 
     private fun LoginToMainActivity() {
@@ -73,6 +83,7 @@ class Login() : AppCompatActivity()  {
         Passwordinlogin = findViewById(R.id.passwordET)
         buttoninlogin = findViewById(R.id.buttonLogin)
         forgotpassword = findViewById(R.id.forgotpasswordTV)
+        SendEmail = findViewById(R.id.send_email)
     }
 
 
