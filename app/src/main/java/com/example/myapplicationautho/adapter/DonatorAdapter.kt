@@ -2,6 +2,8 @@ package com.example.myapplicationautho.adapter
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
@@ -97,6 +99,11 @@ class DonatorAdapter(private val activity: Activity,
                     binding.ibOptions.visibility = View.GONE
                 }
 
+            }
+
+            binding.tvText.setOnClickListener {
+                val intent = Intent(Intent.ACTION_DIAL, Uri.parse("tel:${current?.phone}"))
+                itemView.context.startActivity(intent)
             }
 
             this.pos = position
