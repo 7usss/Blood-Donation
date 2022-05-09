@@ -32,14 +32,21 @@
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/ic_needer_24.xml" value="0.35" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/second_circle.xml" value="0.5055" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/drawable/white_circle.xml" value="0.3365" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_add_donator_post.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_add_emergency_post.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_add_needer.xml" value="0.5161458333333333" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_loading.xml" value="0.3134057971014493" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_profile.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/activity_register.xml" value="0.5" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/custom_header.xml" value="0.5" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_donator.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_emergency.xml" value="0.5161458333333333" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_emergency_.xml" value="0.5161458333333333" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/fragment_needer.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/layout_donator_post_item.xml" value="0.31567028985507245" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/layout_emergency_post_item.xml" value="0.5161458333333333" />
+        <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/layout_needer_post_item.xml" value="0.31567028985507245" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/layout/login.xml" value="0.5" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_btm_nav.xml" value="0.5161458333333333" />
         <entry key="..\:/Users/Hussam/AndroidStudioProjects/MyApplicationAutho/app/src/main/res/menu/menu_drawer_nav.xml" value="0.5" />

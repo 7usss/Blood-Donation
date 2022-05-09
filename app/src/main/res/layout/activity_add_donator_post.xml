@@ -117,6 +117,7 @@
                 android:background="@drawable/rounded_edit_text2"
                 android:textSize="14sp"
                 android:hint="Phone Number"
+                android:textColor="#006AFF"
                 android:fontFamily="@font/poppins"
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp"

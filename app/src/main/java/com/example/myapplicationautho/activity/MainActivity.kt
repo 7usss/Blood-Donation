@@ -75,10 +75,7 @@ class MainActivity : AppCompatActivity() {
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
             when(it.itemId){
-                R.id.home ->{
-                    drawer?.closeDrawer(GravityCompat.START)
-                    true
-                }
+
                 R.id.logout ->{
                     Authe?.signOut()
                     var x : Intent = Intent(this, Login::class.java)
