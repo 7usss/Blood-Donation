@@ -4,65 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.register"
-    android:background="@drawable/color_for_customheader">
+    android:background="@drawable/color_for_customheader"
+    tools:context=".activity.register">
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.14" />
+
     <ImageView
-
         android:id="@+id/img2"
+
         android:layout_width="match_parent"
         android:layout_height="109dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/blooddrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
-        android:layout_marginTop="8dp"
         android:id="@+id/text2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Blood Donation"
+        android:layout_marginTop="8dp"
         android:gravity="center"
+        android:text="Blood Donation"
+        android:textColor="#EFFFFFFF"
         android:textSize="22dp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/img2"
-        android:textStyle="bold"
-        android:textColor="#EFFFFFFF"/>
+        app:layout_constraintTop_toBottomOf="@id/img2" />
 
     <EditText
-        android:textColorHint="@color/purple_500"
-        android:importantForAutofill="no"
         android:id="@+id/Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/custom_editext"
         android:gravity="center"
         android:hint="Enter your Name ..."
+        android:importantForAutofill="no"
         android:inputType="text"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:textColor="#D35757"
-        android:layout_marginTop="32dp"
+        android:textColorHint="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text2" />
 
     <EditText
-        android:textColorHint="@color/purple_500"
         android:id="@+id/email"
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/custom_editext"
         android:gravity="center"
@@ -71,16 +67,17 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:textColor="#D35757"
+        android:textColorHint="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Name" />
+
     <EditText
-        android:textColorHint="@color/purple_500"
         android:id="@+id/pass"
-        android:layout_marginTop="16dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/custom_editext"
         android:gravity="center"
@@ -89,44 +86,60 @@
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:textColor="#D35757"
+        android:textColorHint="@color/purple_500"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
+
     <EditText
-        android:textColorHint="@color/purple_500"
-        android:id="@+id/phone"
-        android:layout_marginTop="16dp"
+        android:id="@+id/passs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/custom_editext"
+        android:gravity="center"
+        android:hint="Confirm your Password ..."
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:inputType="textPassword"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textColor="#D35757"
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@+id/pass"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/custom_editext"
         android:gravity="center"
         android:hint="Enter your Phone number ..."
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:inputType="phone"
         android:paddingTop="8dp"
         android:paddingBottom="8dp"
         android:textColor="#D35757"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pass" />
+        android:textColorHint="@color/purple_500"
+        app:layout_constraintTop_toBottomOf="@+id/passs"
+        tools:layout_editor_absoluteX="16dp" />
 
 
     <Button
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:id="@+id/buttonRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
-        android:textColor="@color/white"
-        android:text="Register"
         android:background="@drawable/button_custtom"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Register"
+        android:textColor="@color/white"
         app:layout_constraintTop_toBottomOf="@+id/phone"
-        />
-
+        tools:layout_editor_absoluteX="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

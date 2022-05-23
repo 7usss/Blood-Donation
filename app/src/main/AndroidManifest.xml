@@ -12,6 +12,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplicationAutho">
         <activity
+            android:name=".activity.guide_emergincy_ar"
+            android:exported="false" />
+        <activity
+            android:name=".activity.guide_needer_ar"
+            android:exported="false" />
+        <activity
+            android:name=".activity.guide_donator_ar"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ethics_ar"
+            android:exported="false" />
+        <activity
+            android:name=".activity.ethics_of_donating_blood"
+            android:exported="false" />
+        <activity
+            android:name=".activity.guide_main"
+            android:exported="false" />
+        <activity
             android:name=".activity.AddEmergencyPostActivity"
             android:exported="false" />
         <activity

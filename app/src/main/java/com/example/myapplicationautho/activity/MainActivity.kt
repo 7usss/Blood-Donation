@@ -74,20 +74,27 @@ class MainActivity : AppCompatActivity() {
     }
     private fun ClickOnItemInDrawerNav() {
         navingationview?.setNavigationItemSelectedListener {
-            when(it.itemId){
+            when (it.itemId) {
 
-                R.id.logout ->{
+                R.id.logout -> {
                     Authe?.signOut()
-                    var x : Intent = Intent(this, Login::class.java)
+                    var x: Intent = Intent(this, Login::class.java)
                     startActivity(x)
                     finish()
                     true
                 }
-                R.id.Howtheappwork ->{
-                    drawer?.closeDrawer(GravityCompat.START)
+                R.id.Howtheappwork -> {
+                    var g: Intent = Intent(this, guide_main::class.java)
+                    startActivity(g)
+                    true
+                }
+                R.id.ethics -> {
+                    var e: Intent = Intent(this, ethics_of_donating_blood::class.java)
+                    startActivity(e)
                     true
                 }else -> true
             }
+
         }
     }
 
