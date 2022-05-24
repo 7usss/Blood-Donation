@@ -21,6 +21,7 @@ class AddNeederActivity : AppCompatActivity() {
     private lateinit var binding: ActivityAddNeederBinding
 
     private lateinit var mAuth: FirebaseAuth
+
     private lateinit var mFirestore: FirebaseFirestore
 
     private lateinit var neederPost: NeederPost
