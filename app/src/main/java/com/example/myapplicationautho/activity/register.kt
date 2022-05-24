@@ -41,6 +41,27 @@ class register : AppCompatActivity() {
             var password = passwordinregister?.text.toString().trim()
             var phone = phoneinregister?.text.toString().trim()
 
+            if (name.isEmpty()){
+                Nameinregister?.error = "Enter Your Name"
+                Nameinregister?.requestFocus()
+                return@setOnClickListener
+            }
+            if (email.isEmpty()){
+                emailinregister?.error = "Enter Your Name"
+                emailinregister?.requestFocus()
+                return@setOnClickListener
+            }
+            if (password.isEmpty()){
+                passwordinregister?.error = "Enter Your Name"
+                passwordinregister?.requestFocus()
+                return@setOnClickListener
+            }
+            if (phone.isEmpty()){
+                phoneinregister?.error = "Enter Your Name"
+                phoneinregister?.requestFocus()
+                return@setOnClickListener
+            }
+
             Authe?.createUserWithEmailAndPassword(email,password)?.addOnCompleteListener {
                 val user = User()
                 user.name = name

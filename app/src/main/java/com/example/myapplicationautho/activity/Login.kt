@@ -43,6 +43,24 @@ class Login() : AppCompatActivity()  {
             var email2 = Emailinloin?.text.toString().trim()
             var password2 = Passwordinlogin?.text.toString().trim()
 
+            if (email2.isEmpty()){
+                Emailinloin?.error = "Enter Your Email"
+                Emailinloin?.requestFocus()
+                return@setOnClickListener
+            }
+            if (password2.isEmpty()){
+                Passwordinlogin?.error = "Enter Your Password"
+                Passwordinlogin?.requestFocus()
+                return@setOnClickListener
+            }
+            if (password2.length < 6 ){
+                Passwordinlogin?.error = "Enter 6 char"
+                Passwordinlogin?.requestFocus()
+                return@setOnClickListener
+            }
+
+
+
 
             Authe?.signInWithEmailAndPassword(email2,password2)?.addOnCompleteListener {
                 if (it.isSuccessful) {
@@ -53,9 +71,10 @@ class Login() : AppCompatActivity()  {
                     startActivity(move_to_main_activity1)
                 }else{
                     Toast.makeText(this, it.exception?.message, Toast.LENGTH_LONG).show()
+                    progrissbar?.visibility = View.GONE
                 }
             }
-            progrissbar?.visibility = View.VISIBLE
+
         }
     }
 
